@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>New Year's Eve 2017 Countdown</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.css" />
+</head>
+<body>
+
+  <div id="countdown"></div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#countdown').countdown('2017/12/31 23:59:59', function(event) {
+        $(this).html(event.strftime('%D days %H:%M:%S'));
+      });
+    });
+  </script>
+
+</body>
+</html>
